@@ -1,0 +1,73 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child){
+        border-bottom: 1px solid rgba(229, 229, 229, 1);
+    }
+}
+.todo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    &:hover{
+        background: #F6F6F6;
+    }
+    &-leftsd{
+        // padding-left: 20px;
+        display: flex;
+        align-items: center;
+        &-checkbox{
+            margin-right: 35px;
+            & > input[type="checkbox"]{
+                appearance: none;
+                -webkit-appearance: none;
+                height: 18px;
+                width: 18px;
+                border: 2px solid #008594;
+                border-radius: 2px;
+                cursor: pointer;
+                position: relative;
+                &:checked{
+                    background-color: #008594;
+                }
+                &::after{
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    content: "\f00c";
+                    font-size: 15px;
+                    color: white;
+                    text-align: center;
+                    display: none;
+                }
+                &:checked::after{
+                    display: block;
+                }
+                &:hover{
+                    background-color: #008594;
+                    border-radius: 2px;
+                }
+            }
+        }
+        &-text{
+            font-family: Poppins,sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 0em;
+            color: rgba(102, 102, 102, 1);
+        }
+
+    }
+    &-delete{
+        &-btn{
+            background: none;
+            border: none;
+            padding-right: 20px;
+            &-icon{
+                font-size: 25px;
+                cursor: pointer;
+            }
+        }
+    }
+}
