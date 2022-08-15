@@ -1,9 +1,20 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.app{
-    width: 1160px;
-    margin-left: 80px;
+.app {
+  overflow-x: hidden;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  .container-md {
+    margin-top: 128px;
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 80px;
+  }
+}
+
+@media screen {
 }

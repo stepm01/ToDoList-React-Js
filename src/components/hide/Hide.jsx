@@ -1,15 +1,32 @@
-import React from 'react'
-import './index.scss'
+import React, { useMemo } from "react";
+import "./index.scss";
+import { useTodoContext } from "../providers/TodoProvider";
 
 const Hide = () => {
-  return (
-    <div>
-      <div className="hide">
-        <input type="checkbox"/>
-        <p className="hide-completed">Hide completed</p>
-      </div>
-    </div>
-  )
-}
+  const { todos, changeTodoHidden } = useTodoContext();
 
-export default Hide
+  const isOneChecked = useMemo(() => {
+    const result = todos.reduce((acc, item) => {
+      if (item.isCompleted) {
+        return acc + 1;
+      } else {
+        return acc;
+      }
+    }, 0);
+
+    return result;
+  }, [todos]);
+
+  return (
+    <>
+      {Boolean(isOneChecked) && (
+        <div className="hide">
+          <input type="checkbox" onClick={changeTodoHidden} />
+          <p className="hide-completed">Hide completed</p>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default Hide;

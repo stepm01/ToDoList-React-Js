@@ -1,49 +1,61 @@
-.input{
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 62px;
+  &-title {
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+  }
+  &-section {
     display: flex;
-    flex-direction: column;
-    padding-top: 129px;
-    &-title{
-        font-family: Poppins,sans-serif;
+    align-items: center;
+    // margin-bottom: 80px;
+    &-inputFill {
+      margin-right: 24px;
+      max-width: 954px;
+      width: 100%;
+      > input {
+        border: 1px solid #ffcd04;
+        border-radius: 4px;
+        padding: 13px 16px 12px 16px;
+        font-family: Poppins, sans-serif;
+        // color: rgba(223, 223, 223, 1);
         font-size: 18px;
         font-weight: 400;
         line-height: 27px;
         letter-spacing: 0em;
         text-align: left;
-    }
-    &-section{
-        display: flex;
-        align-items: center;
-        margin-bottom: 80px;
-        &-inputFill{
-            margin-right: 24px;
-            > input{
-                border: 1px solid #FFCD04;
-                border-radius: 4px;
-                padding: 13px 16px 12px 16px;
-                font-family: Poppins,sans-serif;
-                color: rgba(223, 223, 223, 1);
-                font-size: 18px;
-                font-weight: 400;
-                line-height: 27px;
-                letter-spacing: 0em;
-                text-align: left;
-                width: 954px;
-            }
+        width: 100%;
+        &:focus {
+          outline: none;
         }
-        &-btn{
-            >button{
-            cursor: pointer;
-            background: #008594;
-            border-radius: 4px;
-            padding: 12px 18px;
-            border: none;
-            color: rgba(255, 255, 255, 1);
-            font-family: Poppins,sans-serif;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 28px;
-            letter-spacing: 0em;
-           }
-        }
+      }
     }
+    &-btn {
+      > button {
+        cursor: pointer;
+        background: #008594;
+        border-radius: 4px;
+        padding: 12px 18px;
+        border: none;
+        color: rgba(255, 255, 255, 1);
+        font-family: Poppins, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 0em;
+      }
+    }
+  }
+}
+.warning {
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  color: rgba(255, 49, 4, 1);
 }
