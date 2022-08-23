@@ -3,6 +3,7 @@ import { createContext, useState, useContext, useEffect } from "react";
 ///// ***** Context ***** /////
 const TodoContext = createContext();
 
+///// ***** Get data from LS ***** /////
 const getLocalStorage = () => {
   const list = localStorage.getItem("data");
   if (list) {
@@ -61,7 +62,6 @@ const TodoProvider = ({ children }) => {
     setTodos(todos.filter((item) => item.id !== id));
   };
 
-  // const onChange =
   ///// *****Context Value***** /////
   const contextValue = {
     todos,

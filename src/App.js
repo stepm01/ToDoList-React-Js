@@ -1,6 +1,5 @@
 import Input from "./components/input/Input";
 import TodoList from "./components/todoList/TodoList";
-// import Title from './components/introTitle/Title'
 import Hide from "./components/hide/Hide";
 import TodoProvider from "./components/providers/TodoProvider";
 import { useTodoModal } from "./hooks/useTodoModal";

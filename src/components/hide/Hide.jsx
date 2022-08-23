@@ -6,14 +6,13 @@ const Hide = () => {
   const { todos, changeTodoHidden } = useTodoContext();
 
   const isOneChecked = useMemo(() => {
-    const result = todos.reduce((acc, item) => {
-      if (item.isCompleted) {
+    const result = todos.reduce((acc, elem) => {
+      if (elem.isCompleted) {
         return acc + 1;
       } else {
         return acc;
       }
     }, 0);
-
     return result;
   }, [todos]);
 
